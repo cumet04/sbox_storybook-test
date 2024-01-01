@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook --coverage --coverageDirectory .storybook && nyc report --reporter=text -t coverage/storybook --report-dir .storybook"
   },
   "keywords": [],
   "author": "",
