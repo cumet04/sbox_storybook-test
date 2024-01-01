@@ -9,7 +9,17 @@ const config = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
-    "@storybook/addon-coverage"
+    {
+      name: "@storybook/addon-coverage",
+      options: {
+        istanbul: {
+          include: [
+            "../stories/**/*.mdx",
+            "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+          ],
+        },
+      },
+    },
   ],
   framework: {
     name: "@storybook/react-vite",
